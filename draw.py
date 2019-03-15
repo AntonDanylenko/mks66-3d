@@ -2,12 +2,26 @@ from display import *
 from matrix import *
 
   # ====================
-  # add the points for a rectagular prism whose 
-  # upper-left corner is (x, y, z) with width, 
+  # add the points for a rectagular prism whose
+  # upper-left corner is (x, y, z) with width,
   # height and depth dimensions.
   # ====================
 def add_box( points, x, y, z, width, height, depth ):
-    pass
+    for i in range(width):
+        add_edge(points, x+i, y, z, x+i, y, z)
+        add_edge(points, x+i, y+height, z, x+i, y+height, z)
+        add_edge(points, x+i, y, z+depth, x+i, y, z+depth)
+        add_edge(points, x+i, y+height, z+depth, x+i, y+height, z+depth)
+    for i in range(height):
+        add_edge(points, x, y+i, z, x, y+i, z)
+        add_edge(points, x+width, y+i, z, x+width, y+i, z)
+        add_edge(points, x, y+i, z+depth, x, y+i, z+depth)
+        add_edge(points, x+width, y+i, z+depth, x+width, y+i, z+depth)
+    for i in range(depth):
+        add_edge(points, x, y, z+i, x, y, z+i)
+        add_edge(points, x+width, y, z+i, x+width, y, z+i)
+        add_edge(points, x, y+height, z+i, x, y+height, z+i)
+        add_edge(points, x+width, y+height, z+i, x+width, y+height, z+i)
 
   # ====================
   # Generates all the points along the surface
@@ -19,7 +33,7 @@ def generate_sphere( points, cx, cy, cz, r, step ):
     pass
 
   # ====================
-  # adds all the points for a sphere with center 
+  # adds all the points for a sphere with center
   # (cx, cy, cz) and radius r to points
   # should call generate_sphere to create the
   # necessary points
@@ -93,16 +107,16 @@ def draw_lines( matrix, screen, color ):
                    int(matrix[point][1]),
                    int(matrix[point+1][0]),
                    int(matrix[point+1][1]),
-                   screen, color)    
+                   screen, color)
         point+= 2
-        
+
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     add_point(matrix, x0, y0, z0)
     add_point(matrix, x1, y1, z1)
-    
+
 def add_point( matrix, x, y, z=0 ):
     matrix.append( [x, y, z, 1] )
-    
+
 
 
 
@@ -126,7 +140,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     if ( abs(x1-x0) >= abs(y1 - y0) ):
 
         #octant 1
-        if A > 0:            
+        if A > 0:
             d = A + B/2
 
             while x < x1:
