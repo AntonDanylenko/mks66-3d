@@ -1,8 +1,8 @@
 ident
 rotate
-x 20
-rotate
 y 20
+rotate
+x 40
 apply
 display
 save
