@@ -34,4 +34,7 @@ while height<=150:
     add_torus(bowl, cx, cy+height, cz, 5, r, 0.01)
     r+=5
     height=int((r**4)/9000000.0)
+fruit = []
+add_sphere(fruit, 285, 205, 0, 50, 0.01)
 parse_file('script2', bowl, transform, screen2, color2)
+parse_file('script2', fruit, transform, screen2, color2)
