@@ -23,7 +23,7 @@ transform = new_matrix()
 
 screen2 = new_screen()
 transform = new_matrix()
-color2 = [218,165,32]
+color2 = [0,0,0]
 bowl = []
 cx = 250
 cy = 150
