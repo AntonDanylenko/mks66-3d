@@ -3,5 +3,7 @@ rotate
 x 20
 rotate
 y 40
+rotate
+z 180
 apply
 display
