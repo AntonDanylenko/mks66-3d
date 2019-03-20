@@ -1,8 +1,8 @@
 ident
 rotate
-x -20
+x 340
 rotate
-y -40
+y 320
 rotate
 z 180
 move
