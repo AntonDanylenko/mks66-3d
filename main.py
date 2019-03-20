@@ -25,11 +25,11 @@ screen2 = new_screen()
 transform = new_matrix()
 bowl = []
 cx = 250
-cy = 100
+cy = 150
 cz = 0
 r = 5
 height = 0
-while height<=300:
+while height<=200:
     add_torus(bowl, cx, cy+height, cz, 5, r, 0.01)
     r+=5
     height=int((r**4)/9000000.0)
