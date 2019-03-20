@@ -3,9 +3,5 @@ rotate
 x 20
 rotate
 y 40
-rotate
-z 180
-move
-500 500 0
 apply
 display
