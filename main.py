@@ -27,10 +27,10 @@ bowl = []
 cx = 250
 cy = 200
 cz = 0
-r = 20
+r = 5
 height = 0
 while height<=100:
-    add_torus(bowl, cx, cy+height, cz, 20, r, 0.01)
-    r+=20
+    add_torus(bowl, cx, cy+height, cz, 5, r, 0.01)
+    r+=5
     height=int((r**4)/1000000.0)
 parse_file('script2', bowl, transform, screen2, color)
