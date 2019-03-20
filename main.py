@@ -24,6 +24,7 @@ transform = new_matrix()
 screen2 = new_screen()
 transform = new_matrix()
 color2 = [0,0,0]
+color3 = [255,0,0]
 bowl = []
 cx = 250
 cy = 150
@@ -37,4 +38,5 @@ while height<=150:
 fruit = []
 add_sphere(fruit, 285, 205, 0, 50, 0.01)
 parse_file('script2', bowl, transform, screen2, color2)
-parse_file('script2', fruit, transform, screen2, color2)
+parse_file('script2', fruit, transform, screen2, color3)
+save_extension(screen2, 'bowl.png')
