@@ -1,0 +1,9 @@
+ident
+rotate
+x 20
+rotate
+y 20
+apply
+display
+save
+bowl.png

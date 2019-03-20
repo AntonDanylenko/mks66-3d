@@ -22,6 +22,7 @@ transform = new_matrix()
 #parse_file( 'script', edges, transform, screen, color )
 
 screen2 = new_screen()
+transform = new_matrix()
 bowl = []
 cx = 250
 cy = 200
@@ -32,6 +33,4 @@ while height<=100:
     add_torus(bowl, cx, cy+height, cz, 20, r, 0.01)
     r+=20
     height=int((r**4)/1000000.0)
-draw_lines(bowl, screen2, color)
-display(screen2)
-save_extension(screen2, 'bowl.png')
+parse_file('script2', bowl, transform, screen2, color)
