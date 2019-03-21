@@ -19,9 +19,9 @@ transform = new_matrix()
 # print
 # print_matrix( make_rotZ(math.pi/4) )
 
-#parse_file( 'script', edges, transform, screen, color )
+parse_file( 'script', edges, transform, screen, color )
 
-screen2 = new_screen()
+'''screen2 = new_screen()
 transform = new_matrix()
 color2 = [255,255,255]
 color3 = [255,255,0]
@@ -41,3 +41,4 @@ add_box(bowl, 245, -100, -5, 10, 250, 10)
 parse_file('script2', fruit, transform, screen2, color3)
 parse_file('script2', bowl, transform, screen2, color2)
 save_extension(screen2, 'bowl.png')
+'''
